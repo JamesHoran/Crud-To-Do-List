@@ -1,0 +1,21 @@
+// tsconfig.server.json
+{
+  "compilerOptions": {
+    "target": "ES2022", // Or a suitable target for Node.js
+    "module": "ES2022", // Use CommonJS for Node.js
+    "outDir": "./dist",   // Output directory for server files
+    "rootDir": "./src",  // Root of your server source code
+    "strict": true,      // Enable strict type checking
+    "esModuleInterop": true, // For CommonJS/ES module interop
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false // Usually you don't need declarations for the server code
+  },
+  "include": [
+    "src/server.ts", // Or other server files
+    "src/**/*.server.ts" // Include all files with .server.ts extension
+  ],
+  "exclude": [
+    "src/**/*.client.ts" // Exclude all files with .client.ts extension
+  ]
+}
