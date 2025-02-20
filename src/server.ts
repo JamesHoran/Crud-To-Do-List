@@ -6,10 +6,8 @@ const port = 3001
 const app: Express = express();
 
 app.use(cors());
-// app.use(express.json());
 
-// app.get('/', (req: Request, res: Response) => {
-app.get(`http://localhost/${port}`, (req: Request, res: Response) => {
+app.get(`/`, (req: Request, res: Response) => {
   res.send({ message: "json text here that has been updated"})
 })
 
